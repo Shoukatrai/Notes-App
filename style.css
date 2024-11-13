@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: radial-gradient(1224px at 10.6% 8.8%, rgb(255, 255, 255) 0%, rgb(153, 202, 251) 100.2%);
+}
+.container{
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
+input{
+    padding: 12px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 83%;
+    
+}
+
+
+
+.inputFiles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glow-on-hover {
+    border: none;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 15%;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, blue, blue, blue, #48ff00, #00ffd5, #002bff, #7a00ff, blue, blue);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: white;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .inputFiles{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }    
+    .btn{
+        width: 83%;
+        margin-top: 10px;
+    }
+  }
+
+.notes{
+    margin-top: 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(133,133,203,1) 0%, rgba(0,212,255,1) 100%);
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+
+}
+
+
